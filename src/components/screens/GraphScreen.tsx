@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, SafeAreaView, Text } from "react-native";
+import React from 'react';
+import { StyleSheet, SafeAreaView, Text } from 'react-native';
 
 export const GraphScreen: React.FC = () => {
   return (
@@ -12,8 +12,8 @@ export const GraphScreen: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
