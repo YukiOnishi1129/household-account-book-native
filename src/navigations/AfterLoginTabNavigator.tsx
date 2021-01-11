@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Feather, FontAwesome } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
 /* screen */
 import { CalendarScreen } from '../components/screens/CalendarScreen';
 import { GraphScreen } from '../components/screens/GraphScreen';

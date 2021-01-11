@@ -3,12 +3,14 @@ import { StyleSheet, SafeAreaView, View, Text, TextInput, TouchableOpacity } fro
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 /* types */
 import { BeforeLoginRootBottomTabParamList } from '../../types/navigation';
+import { UserContext } from 'src/contexts/userContext';
 
 type Props = {
   navigation: BottomTabNavigationProp<BeforeLoginRootBottomTabParamList>;
 };
 
 export const LoginScreen: React.FC<Props> = ({ navigation }) => {
+  const { setUser } = React.useContext(UserContext);
   const [email, onChangeEmail] = React.useState<string>('');
   const [password, onChangePassword] = React.useState<string>('');
 
@@ -17,8 +19,13 @@ export const LoginScreen: React.FC<Props> = ({ navigation }) => {
    */
   const onLogin = () => {
     // 別ページへ遷移
-    navigation.navigate('SignUp');
-    // console.log(navigation);
+    // navigation.navigate('SignUp');
+    console.log(navigation);
+    setUser({
+      id: '1',
+      name: 'test',
+      email: 'test',
+    });
   };
 
   return (

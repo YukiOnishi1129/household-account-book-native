@@ -6,7 +6,7 @@ import { AppNavigator } from './src/navigations/AppNavigator';
 import { User } from 'src/types/user';
 import { initialUser } from 'src/lib/consts';
 
-export default function App() {
+const App: React.FC = () => {
   const [user, setUser] = React.useState<User>(initialUser);
 
   return (
@@ -18,4 +18,6 @@ export default function App() {
       <AppNavigator />
     </UserContext.Provider>
   );
-}
+};
+
+export default App;

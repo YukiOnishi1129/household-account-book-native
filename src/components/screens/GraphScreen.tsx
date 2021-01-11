@@ -4,7 +4,7 @@ import { StyleSheet, SafeAreaView, Text } from 'react-native';
 export const GraphScreen: React.FC = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>カレンダーページ</Text>
+      <Text>グラフページ</Text>
     </SafeAreaView>
   );
 };

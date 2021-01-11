@@ -1,24 +1,18 @@
 import React from 'react';
-import { Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { UserContext } from 'src/contexts/userContext';
 /* navigations */
 import { AfterLoginTabNavigator } from '../navigations/AfterLoginTabNavigator';
 import { BeforeLoginTabNavigator } from '../navigations/BeforeLoginTabNavigator';
-import { TopScreen } from '../components/screens/TopScreen';
-
-type User = {
-  id: number;
-  email: string;
-};
 
 /**
  *  ログインの有無により表示する画面を管理する
  */
-export const AppNavigator = () => {
-  const user = null;
+export const AppNavigator: React.FC = () => {
+  const { user } = React.useContext(UserContext);
   return (
     <NavigationContainer>
-      {!user ? <BeforeLoginTabNavigator /> : <AfterLoginTabNavigator />}
+      {!!user && user.id === '' ? <BeforeLoginTabNavigator /> : <AfterLoginTabNavigator />}
     </NavigationContainer>
   );
 };
